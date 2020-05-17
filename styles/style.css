@@ -298,7 +298,7 @@ body {
     height: 19px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: 5px;
+    margin-left: 10px;
     text-decoration: none;
 }
 
@@ -312,4 +312,30 @@ body {
 
 .icon-template--youtube {
     background: url(../design/ic-youtube.png) center no-repeat;
+}
+
+.pagination--subsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination__link {
+    text-decoration: none;
+    color: inherit;
+    max-width: 210px;
+}
+
+.pagination__link--next {
+    text-align: right;
+    margin-left: auto;
+}
+
+.pagination__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.pagination__title--next {
+    color: orange;
 }
