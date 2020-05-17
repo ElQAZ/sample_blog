@@ -23,6 +23,22 @@ body {
     max-width: 1260px;
 }
 
+.logo, .cart, .btn, .pagination__btn, .blog-post__img, .pagination__link, .icon-template, .avatar, .commets__reply, .footer__link, .copyright__link {
+    opacity: .8
+}
+
+.logo:hover, .cart:hover, .btn:hover, .pagination__btn:hover, .blog-post__img:hover, .pagination__link:hover, .icon-template:hover, .avatar:hover, .commets__reply:hover, .footer__link:hover, .copyright__link:hover {
+    opacity: 1
+}
+
+.logo:active, .cart:active, .btn:active, .pagination__btn:active, .blog-post__img:active, .pagination__link:active, .icon-template:active, .avatar:active, .commets__reply:active, .footer__link:active, .copyright__link:active {
+    opacity: 1
+}
+
+.logo:focus, .cart:focus, .btn:focus, .pagination__btn:focus, .blog-post__img:focus, .pagination__link:focus, .icon-template:focus, .avatar:focus, .commets__reply:focus, .footer__link:focus, .copyright__link:focus {
+    outline: none;
+}
+
 /* --- Header --- */
 
 .header {
@@ -183,10 +199,6 @@ body {
     box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
 }
 
-/* .btn-width100 {
-    width: 100%;
-} */
-
 /* --- Content --- */
 
 .blog-post {
@@ -195,10 +207,7 @@ body {
 
 .blog-post__head {
     max-width: 534px;
-    padding-bottom: 0 10px 115px;
 }
-
-.blog-post__body {}
 
 .title {
     margin: 0 0 40px;
@@ -243,7 +252,7 @@ body {
     height: 46px;
     margin-left: 10px;
     background: url(../design/ic-next.svg) center no-repeat, linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
-    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+    box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
 }
 
 .blog-post__text {
@@ -287,6 +296,7 @@ body {
 
 .tag:last-child::after {
     content: "";
+    margin-right: 20px;
 }
 
 .share {
@@ -318,7 +328,7 @@ body {
 }
 
 .icon-template--dribbble {
-    background: url(../design/ic-youtube.png) center no-repeat;
+    background: url(../design/ic-dribbble.png) center no-repeat;
 }
 
 .pagination--flex {
@@ -460,8 +470,6 @@ body {
 
 .form-wrap {
     max-width: 730px;
-    /* margin: 163px 0;
-    padding: 10px; */
 }
 
 .form-field {
@@ -526,7 +534,7 @@ body {
     resize: none;
 }
 
-.btn:focus, .input:focus, .textarea:focus {
+.input:focus, .textarea:focus {
     outline: none;
 }
 
@@ -545,15 +553,15 @@ body {
     padding-top: 60px;
 }
 
-.footer-descript, .footer-title, .footer-link, .footer-text, .copyright-link {
+.footer__descript, .footer__title, .footer__link, .footer__text, .copyright__link {
     color: #fff;
 }
 
-.follow-block {
+.footer__follow-block {
     margin-right: auto;
 }
 
-.footer-descript {
+.footer__descript {
     padding: 32px 10px 0;
     max-width: 265px;
     font-size: inherit;
@@ -565,25 +573,21 @@ body {
     padding: 0;
 }
 
-.follow-list {
+.list--follow-list {
     display: flex;
     align-items: center;
     padding: 5px;
     box-sizing: border-box;
 }
 
-.icon-template {
+.icon-template--footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    overflow: hidden;
     margin: 0 5px;
 }
 
-.footer-title, .footer-link, .footer-text {
+.footer__title, .footer__link, .footer__text {
     font-size: 15px;
 }
 
@@ -599,13 +603,13 @@ body {
     padding-left: 10px;
 }
 
-.footer-title {
+.footer__title {
     margin: 0;
     padding: 10px 0 40px;
     line-height: 20px;
 }
 
-.footer-link, .footer-text {
+.footer__link, .footer__text {
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
@@ -620,11 +624,11 @@ body {
     background: #000;
 }
 
-.copyright-section {
+.copyright__section {
     display: flex;
 }
 
-.copyright-link {
+.copyright__link {
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
@@ -633,40 +637,14 @@ body {
     margin-right: 10px;
 }
 
-.primary-left {
+.copyright__link--primary-left {
     margin-left: 10px;
     margin-right: auto;
 }
 
-.site::after {
+.copyright__link--site::after {
     content: "Credit";
     font-size: 12px;
     font-weight: bold;
     color: yellow;
 }
-
-/* @media screen and (min-width: 1009px) {
-    .menu {
-        order: 0;
-    }
-}
-
-@media screen and (min-width: 490px) {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .menu {
-        display: flex;
-    }
-    .menu-item {
-        display: flex;
-        margin: 0 10px;
-    }
-    .menu-item:hover::after {
-        left: 50%;
-    }
-
-} */
