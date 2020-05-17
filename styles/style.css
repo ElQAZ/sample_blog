@@ -339,3 +339,30 @@ body {
 .pagination__title--next {
     color: orange;
 }
+
+.comments__title {
+    font-size: 36px;
+    line-height: 51px;
+}
+
+.comments__wrap {
+    /* background: #FFFFFF; */
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comments__comment-block {
+    display: flex;
+}
+
+.avatar {
+    display: flex;
+
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #c4c4c4;
+    margin: 10px;
+}
