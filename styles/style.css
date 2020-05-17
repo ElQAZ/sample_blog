@@ -314,7 +314,7 @@ body {
     background: url(../design/ic-youtube.png) center no-repeat;
 }
 
-.pagination--subsection {
+.pagination--flex {
     display: flex;
     flex-wrap: wrap;
 }
@@ -346,23 +346,104 @@ body {
 }
 
 .comments__wrap {
-    /* background: #FFFFFF; */
     border: 1px solid #efefef;
     border-radius: 10px;
-    padding: 20px;
+    overflow: hidden;
 }
 
 .comments__comment-block {
     display: flex;
+    padding: 50px;
+    border-bottom: 1px solid #efefef;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 600px) {
+    .comments__comment-block {
+        flex-wrap: nowrap;
+    }
+}
+
+.comments__wrap:last-child {
+    border-bottom: none;
+}
+
+.comments__comment-block--subcomment {
+    border-bottom: none;
+}
+
+.comments__comment-block--response {
+    padding-left: 50px;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+@media screen and (min-width: 600px) {
+    .comments__comment-block--response {
+        padding-left: 200px;
+        justify-content: flex-start;
+        text-align: left;
+    }
 }
 
 .avatar {
-    display: flex;
-
     width: 94px;
     height: 94px;
     border-radius: 50%;
     overflow: hidden;
     background: #c4c4c4;
-    margin: 10px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    flex-shrink: 0;
+}
+
+.comments__comment-block--response .avatar {
+    margin-right: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .comments__comment-block--response .avatar {
+        margin-right: 50px;
+    }
+}
+
+.comments__text {
+    max-width: 530px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #535353;
+    padding: 0 0 30px;
+    margin: 0;
+}
+
+.comments__time-stamp {
+    font-size: 12px;
+    line-height: 17px;
+    color: #989898;
+    margin-right: 10px;
+}
+
+.comments__comment-block--response .comments__time-stamp {
+    margin-right: 0;
+}
+
+.commets__reply {
+    font-size: 12px;
+    line-height: 57px;
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+.comments__comment-block--response .commets__reply {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .comments__comment-block--response .comments__time-stamp {
+        margin-right: 10px;
+    }
+    .comments__comment-block--response .commets__reply {
+        margin-left: 0;
+    }
 }
